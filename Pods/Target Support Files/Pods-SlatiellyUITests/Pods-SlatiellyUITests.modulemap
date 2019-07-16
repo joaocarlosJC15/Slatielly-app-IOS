@@ -1,0 +1,6 @@
+framework module Pods_SlatiellyUITests {
+  umbrella header "Pods-SlatiellyUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
