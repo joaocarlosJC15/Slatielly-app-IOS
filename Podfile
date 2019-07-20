@@ -8,6 +8,7 @@ target 'Slatielly' do
   # Pods for Slatielly
    pod 'Firebase/Core'
    pod 'Firebase/Firestore'
+   pod 'Firebase/Auth'
 
 
   target 'SlatiellyTests' do
