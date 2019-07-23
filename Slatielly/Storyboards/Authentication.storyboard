@@ -66,6 +66,9 @@
                         <viewLayoutGuide key="safeArea" id="hSC-hs-2Zu"/>
                     </view>
                     <navigationItem key="navigationItem" title="Authentication" id="g2J-No-xgy"/>
+                    <connections>
+                        <segue destination="2cT-HV-dxZ" kind="show" identifier="segue_GoToIndex" id="Apr-AV-OIW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J56-Ji-Jx6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -74,7 +77,7 @@
         <!--Slatielly-->
         <scene sceneID="sBb-83-qoN">
             <objects>
-                <viewController id="Eez-kG-wDd" sceneMemberID="viewController">
+                <viewController id="Eez-kG-wDd" customClass="RegisterView" customModule="Slatielly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9q0-IF-fO8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,7 +110,7 @@
                                                 <rect key="frame" x="10" y="142.5" width="325" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <textInputTraits key="textInputTraits" textContentType="tel"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rff-or-0lt">
                                                 <rect key="frame" x="10" y="187.5" width="325" height="30"/>
@@ -158,6 +161,9 @@
                                                 <state key="normal" title="SUBMIT">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="button_Submit:" destination="Eez-kG-wDd" eventType="touchUpInside" id="N6I-cd-Zf7"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -222,15 +228,35 @@
                         <viewLayoutGuide key="safeArea" id="Dmh-Ud-PvU"/>
                     </view>
                     <navigationItem key="navigationItem" title="Slatielly" id="EVV-5v-ZRe"/>
+                    <connections>
+                        <outlet property="textField_CEP" destination="msQ-iT-HT4" id="RRf-xC-4cN"/>
+                        <outlet property="textField_City" destination="JSf-Tk-EOB" id="Hhz-fg-NYr"/>
+                        <outlet property="textField_Complement" destination="c4t-B8-6va" id="Hbd-w7-PPg"/>
+                        <outlet property="textField_Email" destination="FXD-dO-VNA" id="DeY-k0-YoR"/>
+                        <outlet property="textField_Name" destination="Mxf-1A-o3Q" id="cJg-GB-PTX"/>
+                        <outlet property="textField_Neighborhood" destination="6WA-bA-aAF" id="5fp-cK-JrS"/>
+                        <outlet property="textField_Number" destination="wIP-nC-n8K" id="R5s-Td-VJ0"/>
+                        <outlet property="textField_Password" destination="rff-or-0lt" id="RLB-nQ-ejH"/>
+                        <outlet property="textField_Phone" destination="GoR-9D-FEr" id="9Vz-cH-aa4"/>
+                        <outlet property="textField_Street" destination="nuC-h1-im7" id="iig-us-6cU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HdB-z3-Jzr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2149.5999999999999" y="442.5787106446777"/>
         </scene>
+        <!--Index-->
+        <scene sceneID="UqS-mo-dI3">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Index" referencedIdentifier="Index" id="2cT-HV-dxZ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fiE-Di-OpA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3498" y="52"/>
+        </scene>
         <!--Slatielly-->
         <scene sceneID="t74-Uk-LGW">
             <objects>
-                <viewController id="HjO-TA-1xf" sceneMemberID="viewController">
+                <viewController id="HjO-TA-1xf" customClass="LoginView" customModule="Slatielly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q2N-Yr-pU2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -263,6 +289,9 @@
                                         <state key="normal" title="SUBMIT">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="button_Submit:" destination="HjO-TA-1xf" eventType="touchUpInside" id="xvf-2D-x2U"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -291,6 +320,10 @@
                         <viewLayoutGuide key="safeArea" id="8GW-iF-3lD"/>
                     </view>
                     <navigationItem key="navigationItem" title="Slatielly" id="AY1-gC-nby"/>
+                    <connections>
+                        <outlet property="textField_Email" destination="aGV-rZ-lkA" id="1RG-9O-wbY"/>
+                        <outlet property="textField_Password" destination="jn3-lP-QhJ" id="i4U-BL-6rL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EAs-Cd-0zp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
