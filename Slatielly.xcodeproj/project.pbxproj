@@ -29,6 +29,7 @@
 		1FC80C5722DE434C00D0BE59 /* SlatiellyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC80C5622DE434C00D0BE59 /* SlatiellyUITests.swift */; };
 		1FC80C6722DE51E700D0BE59 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FC80C6622DE51E600D0BE59 /* GoogleService-Info.plist */; };
 		1FDBB7B722E5572900AC257C /* Index.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FDBB7B622E5572900AC257C /* Index.storyboard */; };
+		1FF752F622E77FF5000BD209 /* IndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF752F522E77FF5000BD209 /* IndexView.swift */; };
 		75D1F85177B9110930BF1472 /* Pods_SlatiellyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F1D4EEF1DE45F5601BD1B8 /* Pods_SlatiellyTests.framework */; };
 		B4FC0301378292E485331089 /* Pods_SlatiellyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D436DB94711131A352A212A1 /* Pods_SlatiellyUITests.framework */; };
 		DC0D18A0A8D8C5A47158D92C /* Pods_Slatielly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72376A4271CD5213C98960B0 /* Pods_Slatielly.framework */; };
@@ -80,6 +81,7 @@
 		1FC80C5822DE434C00D0BE59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FC80C6622DE51E600D0BE59 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1FDBB7B622E5572900AC257C /* Index.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Index.storyboard; sourceTree = "<group>"; };
+		1FF752F522E77FF5000BD209 /* IndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexView.swift; sourceTree = "<group>"; };
 		67DF902FB89C73DF48CD1196 /* Pods-SlatiellyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlatiellyTests.debug.xcconfig"; path = "Target Support Files/Pods-SlatiellyTests/Pods-SlatiellyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		72376A4271CD5213C98960B0 /* Pods_Slatielly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Slatielly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7548B764A12CF27C3B2409B7 /* Pods-SlatiellyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlatiellyUITests.release.xcconfig"; path = "Target Support Files/Pods-SlatiellyUITests/Pods-SlatiellyUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -167,13 +169,6 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
-		1FBBCDD722DF7D7A00E5518A /* DressesIndex */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DressesIndex;
-			sourceTree = "<group>";
-		};
 		1FBBCDDC22DF80B300E5518A /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,10 +209,10 @@
 		1FC80C3522DE433B00D0BE59 /* Slatielly */ = {
 			isa = PBXGroup;
 			children = (
+				1FF752F322E77FAC000BD209 /* Index */,
 				1F63CF1922E1676D00148732 /* Authentication */,
 				1F2FE9E422E15C9B00F2D212 /* Storyboards */,
 				1FBBCDDC22DF80B300E5518A /* Model */,
-				1FBBCDD722DF7D7A00E5518A /* DressesIndex */,
 				1FC80C6622DE51E600D0BE59 /* GoogleService-Info.plist */,
 				1FC80C3622DE433B00D0BE59 /* AppDelegate.swift */,
 				1FC80C3D22DE434B00D0BE59 /* Assets.xcassets */,
@@ -242,6 +237,22 @@
 				1FC80C5822DE434C00D0BE59 /* Info.plist */,
 			);
 			path = SlatiellyUITests;
+			sourceTree = "<group>";
+		};
+		1FF752F322E77FAC000BD209 /* Index */ = {
+			isa = PBXGroup;
+			children = (
+				1FF752F422E77FB9000BD209 /* Index */,
+			);
+			path = Index;
+			sourceTree = "<group>";
+		};
+		1FF752F422E77FB9000BD209 /* Index */ = {
+			isa = PBXGroup;
+			children = (
+				1FF752F522E77FF5000BD209 /* IndexView.swift */,
+			);
+			path = Index;
 			sourceTree = "<group>";
 		};
 		4F5E7B5146BE016C8BE5DA85 /* Pods */ = {
@@ -503,6 +514,7 @@
 				1F9A554E22E2C222000AC204 /* RegisterView.swift in Sources */,
 				1F9A555222E2C35D000AC204 /* LoginControl.swift in Sources */,
 				1F63CF1D22E1696000148732 /* AuthenticationView.swift in Sources */,
+				1FF752F622E77FF5000BD209 /* IndexView.swift in Sources */,
 				1F6719E622E4DFEB0031C93F /* Rent.swift in Sources */,
 				1FC80C3722DE433B00D0BE59 /* AppDelegate.swift in Sources */,
 			);

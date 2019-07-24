@@ -23,7 +23,7 @@ class AuthenticationView: UIViewController
     {
         if Auth.auth().currentUser != nil
         {
-            performSegue(withIdentifier: "segue_GoToIndex", sender: self)
+            performSegue(withIdentifier: "segue_GoToIndexFromAuthentication", sender: self)
         }
     }
     

@@ -67,7 +67,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Authentication" id="g2J-No-xgy"/>
                     <connections>
-                        <segue destination="2cT-HV-dxZ" kind="show" identifier="segue_GoToIndex" id="Apr-AV-OIW"/>
+                        <segue destination="2cT-HV-dxZ" kind="show" identifier="segue_GoToIndexFromAuthentication" id="Apr-AV-OIW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J56-Ji-Jx6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -239,19 +239,20 @@
                         <outlet property="textField_Password" destination="rff-or-0lt" id="RLB-nQ-ejH"/>
                         <outlet property="textField_Phone" destination="GoR-9D-FEr" id="9Vz-cH-aa4"/>
                         <outlet property="textField_Street" destination="nuC-h1-im7" id="iig-us-6cU"/>
+                        <segue destination="2cT-HV-dxZ" kind="show" identifier="segue_GoToIndexFromRegister" id="9eL-hL-AmD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HdB-z3-Jzr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2149.5999999999999" y="442.5787106446777"/>
+            <point key="canvasLocation" x="2482" y="838"/>
         </scene>
         <!--Index-->
         <scene sceneID="UqS-mo-dI3">
             <objects>
-                <viewControllerPlaceholder storyboardName="Index" referencedIdentifier="Index" id="2cT-HV-dxZ" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Index" id="2cT-HV-dxZ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fiE-Di-OpA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3498" y="52"/>
+            <point key="canvasLocation" x="3005" y="112"/>
         </scene>
         <!--Slatielly-->
         <scene sceneID="t74-Uk-LGW">
@@ -323,11 +324,12 @@
                     <connections>
                         <outlet property="textField_Email" destination="aGV-rZ-lkA" id="1RG-9O-wbY"/>
                         <outlet property="textField_Password" destination="jn3-lP-QhJ" id="i4U-BL-6rL"/>
+                        <segue destination="2cT-HV-dxZ" kind="show" identifier="segue_GoToIndexFromLogin" id="WEa-8M-cem"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EAs-Cd-0zp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2149.5999999999999" y="-412.44377811094455"/>
+            <point key="canvasLocation" x="2481" y="-680"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ekF-XJ-qP9">
@@ -355,4 +357,7 @@
     <resources>
         <image name="logo2" width="800" height="960"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="9eL-hL-AmD"/>
+    </inferredMetricsTieBreakers>
 </document>
