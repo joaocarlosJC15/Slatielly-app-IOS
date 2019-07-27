@@ -29,14 +29,14 @@ extension User
 {
     //For firestore
     
-    private convenience init(dictionary: [String:Any])
+    public convenience init(dictionary: [String:Any])
     {
         let id = dictionary["id"] as! String
         let name = dictionary["name"] as! String
         let email = dictionary["email"] as! String
         let phone = dictionary["phone"] as! String
         let role = dictionary["role"] as! String
-        let addressAux = dictionary["id"] as! [String:Any]
+        let addressAux = dictionary["address"] as! [String:Any]
         
         let address = Address(dictionary: addressAux)
         

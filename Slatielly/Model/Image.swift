@@ -1,12 +1,5 @@
-//
-//  Image.swift
-//  Slatielly
-//
-//  Created by Joao Carlos on 17/07/19.
-//  Copyright © 2019 Joao Carlos. All rights reserved.
-//
-
 import UIKit
+import FirebaseFirestore
 
 class Image
 {
@@ -15,6 +8,24 @@ class Image
     
     init()
     {
+        
     }
+    
+    init(addressStorage: String, downloadLink: String)
+    {
+        self.addressStorage = addressStorage
+        self.downloadLink = downloadLink
+    }
+    
+}
 
+extension Image
+{
+    public convenience init(dictionary: [String:Any])
+    {
+        let addressStorage = dictionary["addressStorage"] as! String
+        let downloadLink = dictionary["downloadLink"] as! String
+        
+        self.init(addressStorage: addressStorage, downloadLink: downloadLink)
+    }
 }
