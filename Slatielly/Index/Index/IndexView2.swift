@@ -4,20 +4,26 @@ import FirebaseFirestore
 
 class IndexView: UIViewController
 {
-
+    var indexControl: IndexControl!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
+        self.indexControl = IndexControl(indexView: self)
+        
         let db = Firestore.firestore()
         
-        db.collection("dresses").document("Cb6pVxD39xGbKHElNS6l").getDocument
-            { (document, error) in
+        db.collection("dresses").document("UmOgpl8Vm7uAaDVgH9NA").getDocument
+        { (document, error) in
                 if let document = document, document.exists
                 {
-                    let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
-                    print("Document data: \(dataDescription)")
-                } else
+                    let dress = Dress(document: document)
+                    //let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                    //print("Document data: \(dataDescription)")
+                    print("ALOOOOOOOOOOOOO: \(dress.comments[0].user.email)")
+                }
+                else
                 {
                     print("Document does not exist")
                 }

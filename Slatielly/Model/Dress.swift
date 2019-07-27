@@ -50,12 +50,19 @@ extension Dress
         let prepareDays = dictionary["prepareDays"] as! Int
         let price = dictionary["price"] as! Double
         let size = dictionary["size"] as! String
-        let status = dictionary["status"] as! String
         let type = dictionary["type"] as! String
         let washingDays = dictionary["washingDays"] as! Int
-        let timestamp = dictionary["timestamp"] as! Date
         let imagesAux = dictionary["images"] as! Array<[String:Any]>
         let commentsAux = dictionary["comments"] as! Array<[String:Any]>
+        
+        var status: String = ""
+        if let statusAux = dictionary["status"] as? String
+        {
+            status = statusAux
+        }
+        
+        let timestampAux = dictionary["timestamp"] as! Timestamp
+        let timestamp =  timestampAux.dateValue()
         
         var images: [Image] = []
         

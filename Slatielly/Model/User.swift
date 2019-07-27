@@ -36,9 +36,12 @@ extension User
         let email = dictionary["email"] as! String
         let phone = dictionary["phone"] as! String
         let role = dictionary["role"] as! String
-        let addressAux = dictionary["address"] as! [String:Any]
         
-        let address = Address(dictionary: addressAux)
+        var address: Address = Address()
+        if let addressAux = dictionary["address"] as? [String:Any]
+        {
+            address = Address(dictionary: addressAux)
+        }
         
         self.init(id: id, name: name, email: email, phone: phone, role: role, address: address)
     }

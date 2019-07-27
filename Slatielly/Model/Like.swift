@@ -1,4 +1,5 @@
 import UIKit
+import FirebaseFirestore
 
 class Like
 {
@@ -18,7 +19,9 @@ extension Like
     public convenience init(dictionary: [String:Any])
     {
         let userAux = dictionary["user"] as! [String:Any]
-        let dateLike = dictionary["dateLike"] as! Date
+        
+        let dateLikeAux = dictionary["dateLike"] as! Timestamp
+        let dateLike =  dateLikeAux.dateValue()
         
         let user = User(dictionary: userAux)
         

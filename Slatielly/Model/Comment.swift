@@ -35,13 +35,15 @@ extension Comment
     public convenience init(dictionary: [String:Any])
     {
         let id = dictionary["id"] as! String
-        let date = dictionary["date"] as! Date
         let description = dictionary["description"] as! String
         let userAux = dictionary["user"] as! [String:Any]
         let imageAux = dictionary["image"] as! [String:Any]
         let answersAux = dictionary["answers"] as! Array<[String:Any]>
         let numberLikes = dictionary["numberLikes"] as! Int
         let likesAux = dictionary["likes"] as! Array<[String:Any]>
+        
+        let dateAux = dictionary["date"] as! Timestamp
+        let date =  dateAux.dateValue()
         
         let user = User(dictionary: userAux)
         let image = Image(dictionary: imageAux)

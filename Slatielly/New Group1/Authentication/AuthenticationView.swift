@@ -21,6 +21,7 @@ class AuthenticationView: UIViewController
     
     override func viewWillAppear(_ animated: Bool)
     {
+        super.viewWillAppear(animated)
         if Auth.auth().currentUser != nil
         {
             performSegue(withIdentifier: "segue_GoToIndexFromAuthentication", sender: self)
