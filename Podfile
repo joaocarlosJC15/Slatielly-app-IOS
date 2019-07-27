@@ -9,7 +9,7 @@ target 'Slatielly' do
    pod 'Firebase/Core'
    pod 'Firebase/Firestore'
    pod 'Firebase/Auth'
-
+   pod 'SDWebImage'
 
   target 'SlatiellyTests' do
     inherit! :search_paths

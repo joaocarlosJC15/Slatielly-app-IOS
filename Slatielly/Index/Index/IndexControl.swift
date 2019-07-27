@@ -2,10 +2,10 @@ import UIKit
 
 class IndexControl
 {
-    var indexView: IndexView!
+    var indexTableView: IndexTableView!
     
-    init(indexView: IndexView)
+    init(indexView: IndexTableView)
     {
-        self.indexView = indexView
+        self.indexTableView = indexTableView
     }
 }

@@ -28,38 +28,38 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HZB-wV-VYb">
                                             <rect key="frame" x="16" y="16" width="343" height="288"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4WV-E4-0cm">
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4WV-E4-0cm">
                                                     <rect key="frame" x="0.0" y="0.0" width="343" height="288"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="li3-hy-bFh">
-                                                            <rect key="frame" x="0.0" y="0.0" width="171.5" height="288"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="187" height="288"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vestido Feminino Estampada Manga Longa" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i41-jY-Rs0">
-                                                                    <rect key="frame" x="10" y="10" width="151.5" height="89.5"/>
+                                                                    <rect key="frame" x="10" y="10" width="167" height="67.5"/>
                                                                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="20"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$100,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IC2-0c-WmB">
-                                                                    <rect key="frame" x="10" y="109.5" width="151.5" height="22.5"/>
+                                                                    <rect key="frame" x="10" y="87.5" width="167" height="22.5"/>
                                                                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Variado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOq-Z4-XLl">
-                                                                    <rect key="frame" x="10" y="142" width="151.5" height="23.5"/>
+                                                                    <rect key="frame" x="10" y="120" width="167" height="23.5"/>
                                                                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="21"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PP ao GG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORk-i2-WTT">
-                                                                    <rect key="frame" x="10" y="180.5" width="151.5" height="22.5"/>
+                                                                    <rect key="frame" x="10" y="158.5" width="167" height="22.5"/>
                                                                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poliester" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHo-8o-geM">
-                                                                    <rect key="frame" x="10" y="218" width="151.5" height="22.5"/>
+                                                                    <rect key="frame" x="10" y="196" width="167" height="22.5"/>
                                                                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -85,9 +85,12 @@
                                                             </constraints>
                                                         </view>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo2" translatesAutoresizingMaskIntoConstraints="NO" id="rVQ-6o-8ed">
-                                                            <rect key="frame" x="171.5" y="0.0" width="171.5" height="288"/>
+                                                            <rect key="frame" x="187" y="0.0" width="156" height="288"/>
                                                         </imageView>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="li3-hy-bFh" firstAttribute="width" secondItem="rVQ-6o-8ed" secondAttribute="width" multiplier="1.2" id="hNL-E0-Kzb"/>
+                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -108,6 +111,14 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="descriptionDress" destination="i41-jY-Rs0" id="cZF-4N-ylW"/>
+                                    <outlet property="imageDress" destination="rVQ-6o-8ed" id="9Nl-6d-593"/>
+                                    <outlet property="materialDress" destination="wHo-8o-geM" id="2UR-E6-8ai"/>
+                                    <outlet property="priceDress" destination="IC2-0c-WmB" id="hno-Jh-kyf"/>
+                                    <outlet property="sizeDress" destination="ORk-i2-WTT" id="tIf-6W-Wme"/>
+                                    <outlet property="typeDress" destination="yOq-Z4-XLl" id="UnE-2P-eWc"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
