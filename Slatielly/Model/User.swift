@@ -35,7 +35,7 @@ extension User
         let name = dictionary["name"] as! String
         let email = dictionary["email"] as! String
         let phone = dictionary["phone"] as! String
-        let role = dictionary["role"] as! String
+        let role = dictionary["role"] as? String
         
         var address: Address = Address()
         if let addressAux = dictionary["address"] as? [String:Any]
@@ -43,7 +43,7 @@ extension User
             address = Address(dictionary: addressAux)
         }
         
-        self.init(id: id, name: name, email: email, phone: phone, role: role, address: address)
+        self.init(id: id, name: name, email: email, phone: phone, role: role ?? "", address: address)
     }
     
     public convenience init(document: DocumentSnapshot)

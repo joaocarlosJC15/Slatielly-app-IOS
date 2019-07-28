@@ -30,14 +30,14 @@ extension Address
 {
     public convenience init(dictionary: [String:Any])
     {
-        let cep = dictionary["cep"] as! Int
-        let city = dictionary["city"] as! String
-        let neighborhood = dictionary["neighborhood"] as! String
-        let street = dictionary["street"] as! String
-        let number = dictionary["number"] as! Int
-        let complement = dictionary["complement"] as! String
+        let cep = dictionary["cep"] as? Int
+        let city = dictionary["city"] as? String
+        let neighborhood = dictionary["neighborhood"] as? String
+        let street = dictionary["street"] as? String
+        let number = dictionary["number"] as? Int
+        let complement = dictionary["complement"] as? String
         
-        self.init(cep: cep, city: city, neighborhood: neighborhood, street: street, number: number, complement: complement)
+        self.init(cep: cep ?? 0, city: city ?? "", neighborhood: neighborhood ?? "", street: street ?? "", number: number ?? 0, complement: complement ?? "")
     }
     
     public var documentData: [String : Any]

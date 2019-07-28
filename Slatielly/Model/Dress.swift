@@ -94,4 +94,9 @@ extension Dress
             self.init()
         }
     }
+    
+    public convenience init(document: QueryDocumentSnapshot)
+    {
+        self.init(dictionary: document.data())
+    }
 }

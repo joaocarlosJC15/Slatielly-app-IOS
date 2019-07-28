@@ -1,12 +1,5 @@
-//
-//  IndexTableViewCell.swift
-//  Slatielly
-//
-//  Created by Joao Carlos on 27/07/19.
-//  Copyright © 2019 Joao Carlos. All rights reserved.
-//
-
 import UIKit
+import SDWebImage
 
 class IndexTableViewCell: UITableViewCell
 {
@@ -23,8 +16,19 @@ class IndexTableViewCell: UITableViewCell
     
     @IBOutlet weak var materialDress: UILabel!
     
-    func loadCell()
+    func loadCell(dress: Dress)
     {
+        let url: String! = dress.images[0].downloadLink
         
+        imageDress!.sd_setImage(with: URL(string: url))
+        {
+            (image, error, cache, url) in
+        }
+        
+        descriptionDress.text = dress.description
+        priceDress.text = String(dress.price)
+        typeDress.text = dress.type
+        sizeDress.text = dress.size
+        materialDress.text = dress.material
     }
 }

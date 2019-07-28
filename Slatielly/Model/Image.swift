@@ -23,9 +23,9 @@ extension Image
 {
     public convenience init(dictionary: [String:Any])
     {
-        let addressStorage = dictionary["addressStorage"] as! String
-        let downloadLink = dictionary["downloadLink"] as! String
+        let addressStorage = dictionary["addressStorage"] as? String
+        let downloadLink = dictionary["downloadLink"] as? String
         
-        self.init(addressStorage: addressStorage, downloadLink: downloadLink)
+        self.init(addressStorage: addressStorage ?? "", downloadLink: downloadLink ?? "")
     }
 }

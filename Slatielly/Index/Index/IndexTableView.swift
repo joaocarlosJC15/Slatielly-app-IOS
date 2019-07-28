@@ -4,11 +4,22 @@ class IndexTableView: UITableViewController
 {
     var indexControl: IndexControl!
     
+    var dresses: [Dress] = []
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        self.indexControl = IndexControl(indexView: self)
+        self.indexControl = IndexControl(indexTableView: self)
+        
+        self.indexControl.getDresses()
+    }
+    
+    func loadDress(dresses: [Dress])
+    {
+        self.dresses = dresses
+        
+        self.tableView.reloadData()
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -18,13 +29,15 @@ class IndexTableView: UITableViewController
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 5
+        return dresses.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "dressCell", for: indexPath) as! IndexTableViewCell
+        
+        cell.loadCell(dress: dresses[indexPath.row])
         
         return cell
     }

@@ -37,7 +37,7 @@ extension Comment
         let id = dictionary["id"] as! String
         let description = dictionary["description"] as! String
         let userAux = dictionary["user"] as! [String:Any]
-        let imageAux = dictionary["image"] as! [String:Any]
+        let imageAux = dictionary["image"] as? [String:Any]
         let answersAux = dictionary["answers"] as! Array<[String:Any]>
         let numberLikes = dictionary["numberLikes"] as! Int
         let likesAux = dictionary["likes"] as! Array<[String:Any]>
@@ -46,7 +46,9 @@ extension Comment
         let date =  dateAux.dateValue()
         
         let user = User(dictionary: userAux)
-        let image = Image(dictionary: imageAux)
+        
+        var imageAux2: [String:Any] = [:]
+        let image = Image(dictionary: imageAux ?? imageAux2)
         
         var likes: [Like] = []
         
